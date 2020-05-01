@@ -1,0 +1,18 @@
+{% extends 'tasks/index.html' %}
+{% block title %}Delete{% endblock title %}
+{% block body %}
+
+<div class="center-column">
+<div class="todo-list">
+<div class="item-row">
+
+<p>Are you sure you want to delete "{{item}}" ? </p>
+<a class="btn btn-sm btn-warning" href="{% url 'list' %}">Cancel</a>
+
+<form action="" method="post">{% csrf_token %}
+    <input class="btn btn-sm btn-info " type="submit" name="Confirm" style="display:inline;">
+</form>
+		</div>
+	</div>
+</div>
+{% endblock body%}
